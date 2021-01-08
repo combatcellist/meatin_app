@@ -1,14 +1,19 @@
-#registrations-new {
-  input {
-    width: 100%;
+#registrations-new, #sessions-new {
+  
+  input[type="email"], input[type="password"] {
+    width: 30%;
     padding: 5px;
     border: 1px solid #ccc;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
   }
+  
   .field {
     margin: 10px 0;
+    .name-box {
+      margin-right: 50px;
+    }
   }
   .actions {
     margin: 15px 0;
