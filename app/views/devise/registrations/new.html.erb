@@ -11,7 +11,7 @@
   <div class="field">
     <%= f.label :password, "パスワード" %>
     <% if @minimum_password_length %>
-    <em>(最低 <%= @minimum_password_length %> 文字以上)</em>
+    <em>※英字と数字の両方を含めて設定してください(最低 <%= @minimum_password_length %> 文字以上)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
@@ -26,18 +26,18 @@
   　<%= f.text_field :name %>
   </div>
 
+  <div class="field">
+      <%= f.label :occupation, "所属" %><br />
+    　<%= f.text_area :occupation, class: :form__text %>
+    </div>
+
   　<div class="field">
      <%= f.label :profile, "プロフィール" %><br />
     　<%= f.text_area :profile, class: :form__text %>
   　</div>
 
-    <div class="field">
-      <%= f.label :occupation, "所属" %><br />
-    　<%= f.text_area :occupation, class: :form__text %>
-    </div>
-
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "登録する", class: "button" %>
   </div>
 <% end %>
 

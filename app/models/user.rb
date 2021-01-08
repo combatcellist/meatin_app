@@ -7,4 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :profile, presence: true
   validates :occupation, presence: true
+
+  VALID_PASSWORD_REGEX = (/\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i)
+  validates :password, format: {with: VALID_PASSWORD_REGEX }
 end
