@@ -1,6 +1,13 @@
 <div class="content-wrapper">
   <div class="content-block">
-    <div class="content">
+  <% @posts.each do |post| %>
+  <div class="content">
+  <% if post.images.attached? %>
+    <% post.images.each do |image| %>
+     <%= image_tag image %><br>
+    <% end %>
+  <% end %>
+  
       <div class="user-about">
         <div class="image">
         <%= image_tag "IMG_6389.jpg" %>
@@ -21,12 +28,20 @@
       </div>
 
       <div class="text">
-      <p>これはサンプルテキストですこれはサンプルテキストですこれはサンプルテキストですこれはサンプルテキストですv</p>
-      <p>これはサンプルテキストですこれはサンプルテキストですこれはサンプルテキストですこれはサンプルテキストですv</p>
+      <p><%= post.content %></p>
       </div>
-      <div class="action-menu"></div>
+
+      <div class="action-menu">
+      <div class="like">
+      
       </div>
-   </div>
+      <div class="comemnt">
+      
+      </div>
+      </div>
+      </div>
+  <% end %>
+  </div>
   <div class="sidebar">
     <div class="box"></div>
     <div class="box"></div>
