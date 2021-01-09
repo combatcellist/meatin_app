@@ -68,3 +68,18 @@
 #footer p {
  margin: 0;
 }
+
+.toast {
+  margin: 10px o;
+  text-align: center;
+}
+
+.toast .notice {
+  background-color: rgb(64, 185, 64);
+  color: #fff;
+  padding: 10px;
+}
+
+.toast .alert {
+
+}
